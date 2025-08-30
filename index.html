@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Sathya Sai Institute of Higher Learning - Digital Library</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/Nd1t0ng/image-removebg-preview.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="university-branding">
+                <img src="public/images/university-logo.png" alt="Sri Sathya Sai Institute of Higher Learning Logo" class="university-logo">
+                <div class="university-info">
+                    <h1 class="university-name">Sri Sathya Sai Institute of Higher Learning</h1>
+                    <p class="university-tagline">Nandigiri Campus - Digital Library</p>
+                </div>
+            </div>
+            <nav class="main-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-link">Academic Programs</a>
+                        <div class="dropdown-content">
+                            <a href="#semester-1">First Semester</a>
+                            <a href="#semester-2">Second Semester</a>
+                            <a href="#semester-3">Third Semester</a>
+                            <a href="#semester-4">Fourth Semester</a>
+                            <a href="#semester-5">Fifth Semester</a>
+                            <a href="#semester-6">Sixth Semester</a>
+                            <a href="#semester-7">Seventh Semester</a>
+                            <a href="#semester-8">Eighth Semester</a>
+                        </div>
+                    </li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Academic Digital Library</h1>
+                    <p class="hero-description">Comprehensive collection of academic resources, textbooks, and research materials for university students and faculty members across all disciplines.</p>
+                    <div class="hero-metrics">
+                        <div class="metric">
+                            <span class="metric-value">30+</span>
+                            <span class="metric-label">Academic Texts</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">2</span>
+                            <span class="metric-label">Departments</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">24/7</span>
+                            <span class="metric-label">Access</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-search">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search academic resources, authors, or subjects..." class="search-input">
+                        <button id="searchBtn" class="search-button">Search Library</button>
+                    </div>
+                    <div class="search-suggestions">
+                        <span>Popular searches:</span>
+                        <button class="suggestion-tag" data-search="mathematics">Mathematics</button>
+                        <button class="suggestion-tag" data-search="computer science">Computer Science</button>
+                        <button class="suggestion-tag" data-search="engineering">Calculus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <h2 class="section-title">Browse Academic Disciplines</h2>
+            <div class="filter-container">
+                <button class="filter-button active" data-filter="all">All Disciplines</button>
+                <button class="filter-button" data-filter="maths">Mathematics & Statistics</button>
+                <button class="filter-button" data-filter="computer-science">Computer Science</button>
+                <button class="filter-button" data-filter="awareness">General Studies</button>
+                <button class="filter-button" data-filter="lab">Laboratory Sciences</button>
+                <button class="filter-button" data-filter="eng">English & Literature</button>>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Semester Sections -->
+            <section id="semester-1" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">First Semester</h2>
+                        <p class="semester-description">Foundation courses introducing fundamental concepts across core academic disciplines</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-1">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-1"></div>
+            </section>
+
+            <section id="semester-2" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Second Semester</h2>
+                        <p class="semester-description">Intermediate studies building upon foundational knowledge with practical applications</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-2">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-2"></div>
+            </section>
+
+            <section id="semester-3" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Third Semester</h2>
+                        <p class="semester-description">Advanced theoretical concepts with specialized subject matter and research methodologies</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-3">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-3"></div>
+            </section>
+
+            <section id="semester-4" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Fourth Semester</h2>
+                        <p class="semester-description">Comprehensive study of core subjects with emphasis on analytical and critical thinking</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-4">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-4"></div>
+            </section>
+
+            <section id="semester-5" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Fifth Semester</h2>
+                        <p class="semester-description">Advanced specialization with research-oriented coursework and practical implementations</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-5">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-5"></div>
+            </section>
+
+            <section id="semester-6" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Sixth Semester</h2>
+                        <p class="semester-description">Professional development with industry-relevant skills and advanced project work</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-6">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-6"></div>
+            </section>
+
+            <section id="semester-7" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Seventh Semester</h2>
+                        <p class="semester-description">Advanced research methodologies with focus on innovation and independent study</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-7">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-7"></div>
+            </section>
+
+            <section id="semester-8" class="semester-section">
+                <div class="semester-header">
+                    <div class="semester-info">
+                        <h2 class="semester-title">Eighth Semester</h2>
+                        <p class="semester-description">Capstone projects and comprehensive examination of accumulated knowledge</p>
+                    </div>
+                    <div class="semester-stats">
+                        <span class="book-count" id="count-semester-8">0 Resources</span>
+                    </div>
+                </div>
+                <div class="books-collection" id="books-semester-8"></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">About Our Academic Library</h2>
+                    <p class="about-description">The SSSIHL-NDG Digital Library serves as the cornerstone of academic excellence. Our comprehensive digital repository provides students, faculty with unrestricted access to a vast collection of academic resources, and educational materials spanning multiple disciplines.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h3 class="feature-title">Comprehensive Collection</h3>
+                            <p class="feature-description">Extensive repository of academic textbooks and scholarly publications across all major disciplines and specializations.</p>
+                        </div>
+                        <div class="feature">
+                            <h3 class="feature-title">Advanced Research Tools</h3>
+                            <p class="feature-description">Sophisticated search capabilities, citation management, and collaborative research tools designed for academic excellence.</p>
+                        </div>
+                        <div class="feature">
+                            <h3 class="feature-title">24/7 Digital Access</h3>
+                            <p class="feature-description">Round-the-clock availability with seamless online reading, downloading, and note-taking capabilities for enhanced learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Reader -->
+    <div id="digitalReader" class="digital-reader">
+        <div class="reader-interface">
+            <div class="reader-toolbar">
+                <div class="reader-info">
+                    <h3 id="readerBookTitle" class="reader-title">Book Title</h3>
+                    <span id="readerSubject" class="reader-subject">Subject Area</span>
+                </div>
+                <div class="reader-navigation">
+                    <button id="prevPageBtn" class="nav-button">Previous Page</button>
+                    <span id="pageIndicator" class="page-indicator">Page 1 of 100</span>
+                    <button id="nextPageBtn" class="nav-button">Next Page</button>
+                </div>
+                <div class="reader-controls">
+                    <button id="settingsBtn" class="control-button">Reading Settings</button>
+                    <button id="fullscreenBtn" class="control-button">Fullscreen Mode</button>
+                    <button id="closeReaderBtn" class="control-button close-button">Close Reader</button>
+                </div>
+            </div>
+            <div class="reader-body">
+                <div class="reader-main">
+                    <div class="progress-indicator"></div>
+                    <iframe id="bookViewer" class="book-viewer" frameborder="0"></iframe>
+                </div>
+                <div class="reader-sidebar">
+                    <div class="sidebar-header">
+                        <h4 class="sidebar-title">Study Notes & Annotations</h4>
+                    </div>
+                    <div class="notes-section">
+                        <div class="page-selector">
+                            <label class="selector-label">Page Number:</label>
+                            <input type="number" id="pageNumberInput" class="page-input" min="1" value="1">
+                        </div>
+                        <div class="note-composer">
+                            <textarea id="noteTextarea" class="note-input" placeholder="Add your study notes, observations, or questions for this page..."></textarea>
+                            <button id="addNoteBtn" class="add-note-button">Save Note</button>
+                        </div>
+                        <div id="notesList" class="notes-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Settings Panel -->
+    <div id="settingsPanel" class="settings-panel">
+        <div class="settings-content">
+            <h3 class="settings-title">Reading Preferences</h3>
+            <div class="settings-groups">
+                <div class="setting-group">
+                    <label class="setting-label">Display Theme:</label>
+                    <div class="theme-options">
+                        <button class="theme-option" data-theme="light">Light Mode</button>
+                        <button class="theme-option" data-theme="dark">Dark Mode</button>
+                        <button class="theme-option" data-theme="sepia">Sepia Mode</button>
+                        <button class="theme-option" data-theme="contrast">High Contrast</button>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <label class="setting-label">Text Size:</label>
+                    <div class="range-control">
+                        <input type="range" id="fontSizeRange" class="range-slider" min="12" max="28" value="16">
+                        <span id="fontSizeDisplay" class="range-value">16px</span>
+                    </div>
+                </div>
+                <div class="setting-group">
+                    <label class="setting-label">Line Spacing:</label>
+                    <div class="range-control">
+                        <input type="range" id="lineSpacingRange" class="range-slider" min="1.0" max="2.5" step="0.1" value="1.5">
+                        <span id="lineSpacingDisplay" class="range-value">1.5</span>
+                    </div>
+                </div>
+            </div>
+            <button id="closeSettingsBtn" class="close-settings-button">Apply Settings</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-branding">
+                        <img src="public/images/university-logo.png" alt="Sri Sathya Sai Institute of Higher Learning Logo" class="footer-logo">
+                        <div>
+                            <h3 class="footer-title">Sri Sathya Sai Institute of Higher Learning</h3>
+                            <p class="footer-campus">Nandigiri Campus</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">Empowering academic excellence through comprehensive digital resources and innovative learning technologies.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Academic Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#semester-1">Undergraduate Programs</a></li>
+                        <li><a href="#semester-5">Graduate Studies</a></li>
+                        <li><a href="#resources">Research Materials</a></li>
+                        <li><a href="#about">Digital Collections</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Academic Disciplines</h4>
+                    <ul class="footer-links">
+                        <li>Mathematics & Statistics</li>
+                        <li>Computer Science & Engineering</li>
+                        <li>Literature & Humanities</li>
+                        <li>Laboratory Sciences</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Support Services</h4>
+                    <ul class="footer-links">
+                        <li>Research Assistance</li>
+                        <li>Technical Support</li>
+                        <li>Academic Guidelines</li>
+                        <li>Accessibility Services</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 Sri Sathya Sai Institute of Higher Learning (Nandigiri Campus). Developed by Abhiram. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
